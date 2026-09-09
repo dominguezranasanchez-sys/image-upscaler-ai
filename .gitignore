@@ -1,0 +1,22 @@
+# ==== .NET / Visual Studio ====
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# ==== Python ====
+__pycache__/
+*.pyc
+venv/
+env/
+.venv/
+
+# ==== Model weights (large files, downloaded automatically) ====
+*.pth
+*.onnx
+weights/
+
+# ==== OS junk ====
+.DS_Store
+Thumbs.db
