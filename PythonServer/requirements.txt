@@ -1,0 +1,32 @@
+# ── Recommended installation order ───────────────────────────────────────
+#
+# 1) Install PyTorch first, choosing CPU or CUDA depending on your GPU:
+#
+#    If you have an NVIDIA GPU with CUDA drivers installed (recommended):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+#    If you have no GPU or prefer CPU for now (always works):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#
+# 2) Install setuptools (required to build the RealESRGAN package,
+#    which uses the legacy setup.py / pkg_resources system, removed in
+#    setuptools 82+. Without this step you will see:
+#    "ModuleNotFoundError: No module named 'pkg_resources'"):
+#    pip install "setuptools<82"
+#
+# 3) Then install the rest of the dependencies WITHOUT build isolation
+#    (so the setuptools version pinned above is used when building RealESRGAN):
+#    pip install -r requirements.txt --no-build-isolation
+#
+# Note: this requirements.txt pins huggingface_hub<0.26 because the
+# RealESRGAN package (ai-forever) uses cached_download(), removed in
+# huggingface_hub 0.26+. If you already have a newer version installed
+# (from another project), this will downgrade it in your current environment.
+# If that is a concern, use a dedicated virtual environment (venv).
+#
+# ─────────────────────────────────────────────────────────────────────────
+
+flask==3.0.3
+pillow==10.4.0
+huggingface_hub==0.25.2
+git+https://github.com/ai-forever/Real-ESRGAN.git
