@@ -2,10 +2,6 @@
 
 *Read this in [Español](README.es.md).*
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b717b9e29f3097dbe319b05a369883cc23ba83a5
 A Windows desktop application that upscales images using two modes:
 
 - **AI mode** — Real-ESRGAN neural network (PyTorch), with automatic GPU (CUDA) / CPU fallback
