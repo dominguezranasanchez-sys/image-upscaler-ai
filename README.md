@@ -1,5 +1,7 @@
 # ImageUpscaler-AI
 *Read this in [Español](README.es.md).*
+
+
 A Windows desktop application that upscales images using two modes:
 
 - **AI mode** — Real-ESRGAN neural network (PyTorch), with automatic GPU (CUDA) / CPU fallback
